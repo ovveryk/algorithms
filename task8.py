@@ -1,4 +1,4 @@
-arr=[5,1,4,2,8]
+arr=[5,1,4,0,-56,78,-5,100]
 
 def bubble(mas):
     n = len(mas)
