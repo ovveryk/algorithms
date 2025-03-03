@@ -235,24 +235,24 @@
 # Допоможе чи заб'є?
 # STATUS - not counted
 
-# def help_or_kill (n, s):
-#     target = "TOILET"
-#     i = 0
-#     counter = 0
-#
-#     while i <= len(s) - len(target):
-#         if s[i:i+len(target)] == target:
-#             i+= len(target)
-#             counter += 1
-#         else:
-#             i+=1
-#     result = "YES" if counter >= n else "NO"
-#     # print("Toilet = ", counter)
-#     return result
-#
-# n = int(input())
-# s = input()
-# print(help_or_kill(n, s))
+def help_or_kill (n, s):
+    target = "TOILET"
+    i = 0
+    counter = 0
+
+    while i <= len(s) - len(target):
+        if s[i:i+len(target)] == target:
+            i+= len(target)
+            counter += 1
+        else:
+            i+=1
+    result = "YES" if counter >= n else "NO"
+    # print("Toilet = ", counter)
+    return result
+
+n = int(input())
+s = input()
+print(help_or_kill(n, s))
 
 # -------------------- END ------------------------
 
@@ -270,9 +270,25 @@ teams(int(n), int(k))
 
 #-------------------- START ------------------------
 # 14
-#
+# Існує дві дороги: Одна пряма, а інша …
 # STATUS - not counted
+import math
 
+def distance_between(arr, n):
+    couter = 0
+    for i in range(n):
+        couter += distance(arr[i])
+    return couter
+
+def distance(arr):
+    x1, y1, x2, y2 = arr
+    d = math.isqrt(((x2 - x1) ** 2) + ((y2 - y1) ** 2))
+    return d
+
+n = int(input())
+points = [list(map(int, input().split())) for _ in range(n)]
+
+print(distance_between(points, n))
 
 # -------------------- END ------------------------
 
