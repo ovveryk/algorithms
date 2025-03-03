@@ -235,23 +235,51 @@
 # Допоможе чи заб'є?
 # STATUS - not counted
 
-def help_or_kill (n, s):
-    target = "TOILET"
-    i = 0
-    counter = 0
+# def help_or_kill (n, s):
+#     target = "TOILET"
+#     i = 0
+#     counter = 0
+#
+#     while i <= len(s) - len(target):
+#         if s[i:i+len(target)] == target:
+#             i+= len(target)
+#             counter += 1
+#         else:
+#             i+=1
+#     result = "YES" if counter >= n else "NO"
+#     # print("Toilet = ", counter)
+#     return result
+#
+# n = int(input())
+# s = input()
+# print(help_or_kill(n, s))
 
-    while i <= len(s) - len(target):
-        if s[i:i+len(target)] == target:
-            i+= len(target)
-            counter += 1
-        else:
-            i+=1
-    result = "YES" if counter >= n else "NO"
-    # print("Toilet = ", counter)
-    return result
+# -------------------- END ------------------------
 
-n = int(input())
-s = input()
-print(help_or_kill(n, s))
+#-------------------- START ------------------------
+# 13
+# Літня школа
+# STATUS - not counted
+def teams(n, k):
+    print(n // k)
+
+n,k = input().split()
+teams(int(n), int(k))
+
+# -------------------- END ------------------------
+
+#-------------------- START ------------------------
+# 14
+#
+# STATUS - not counted
+
+
+# -------------------- END ------------------------
+
+#-------------------- START ------------------------
+# 15
+#
+# STATUS - not counted
+
 
 # -------------------- END ------------------------
