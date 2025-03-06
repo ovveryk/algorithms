@@ -258,13 +258,25 @@ print(help_or_kill(n, s))
 
 #-------------------- START ------------------------
 # 13
-# Літня школа
+# Зима
 # STATUS - not counted
-def teams(n, k):
-    print(n // k)
 
-n,k = input().split()
-teams(int(n), int(k))
+a,b,c = input().split()
+
+def winter(a,b,c):
+    count = 0
+
+    count = a + b
+
+    if  b + c < count :
+        count = b + c
+
+    if a + c < count:
+        count = a + c
+
+    return count
+
+print(winter(int(a), int(b), int(c)))
 
 # -------------------- END ------------------------
 
