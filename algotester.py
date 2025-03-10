@@ -247,7 +247,6 @@ def help_or_kill (n, s):
         else:
             i+=1
     result = "YES" if counter >= n else "NO"
-    # print("Toilet = ", counter)
     return result
 
 n = int(input())
@@ -308,6 +307,22 @@ print(distance_between(points, n))
 # 15
 #
 # STATUS - not counted
+def robot(s, x, y):
+    U = 0
+    R = 0
+    for i in s:
+        if i == "U":
+            U += 1
+        if i == "R":
+            R += 1
 
+    result = "YES" if U >= y and R >= x else "NO"
+    return result
+
+
+s = input()
+x, y = input().split()
+
+print(robot(s, int(x), int(y)))
 
 # -------------------- END ------------------------
