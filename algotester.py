@@ -253,6 +253,8 @@ n = int(input())
 s = input()
 print(help_or_kill(n, s))
 
+#link: https://algotester.com/uk/ArchiveProblem/DisplayWithEditor/20020
+
 # -------------------- END ------------------------
 
 #-------------------- START ------------------------
@@ -276,6 +278,8 @@ def winter(a,b,c):
     return count
 
 print(winter(int(a), int(b), int(c)))
+
+# link: https://algotester.com/uk/ArchiveProblem/DisplayWithEditor/71007
 
 # -------------------- END ------------------------
 
@@ -301,11 +305,13 @@ points = [list(map(int, input().split())) for _ in range(n)]
 
 print(distance_between(points, n))
 
+# link:  https://algotester.com/uk/ArchiveProblem/DisplayWithEditor/20070
+
 # -------------------- END ------------------------
 
 #-------------------- START ------------------------
 # 15
-#
+# Робот
 # STATUS - not counted
 def robot(s, x, y):
     U = 0
@@ -325,4 +331,5 @@ x, y = input().split()
 
 print(robot(s, int(x), int(y)))
 
+# link: https://algotester.com/uk/ArchiveProblem/DisplayWithEditor/40233
 # -------------------- END ------------------------
