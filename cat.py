@@ -1,6 +1,7 @@
 class Cat:
     def __init__(self, age):
         self.age = age
+        self.value_speed = _set_average_speed()
 
     def print_age(self):
         print(self.age)
@@ -13,7 +14,7 @@ class Cat:
         if self.age > 10:
             return 6
 
-    value_speed = _set_average_speed()
+#    value_speed = _set_average_speed()
 #     Знайти як присвоїти значення приватного метода в змінну класу.
 # https://docs.python.org/uk/3.13/tutorial/classes.html#class-and-instance-variables
 
