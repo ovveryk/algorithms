@@ -2,10 +2,8 @@ class Cat:
     def __init__(self, age):
         self.age = age
         self. value_speed = self._set_average_speed()
-        self.saturation_level = 10
+        self.saturation_level = 0
 
-    def print_age(self):
-        print(self.age)
 
     def _set_average_speed(self):
         if self.age <= 7:
@@ -16,7 +14,7 @@ class Cat:
             return 6
 
     def _increase_saturation_level(self):
-        pass
+       pass
 
     def _reduce_saturation_level(self):
         pass
@@ -28,12 +26,23 @@ class Cat:
     def get_average_speed(self):
         pass
 
+    def print_age(self):
+        print(self.age)
+
+    def run(self):
+        pass
+
+    def food(self):
+        pass
+
+
 a = Cat(1)
 a.print_age()
-
+a._increase_saturation_level()
 print(a.value_speed)
 print(a.saturation_level)
 print(a.get_saturation_level())
+
 
 
 
