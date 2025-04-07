@@ -3,6 +3,7 @@ class Cat:
         self.age = age
         self. value_speed = self._set_average_speed()
         self.saturation_level = 0
+        self.run_km = 0
 
 
     def _set_average_speed(self):
@@ -13,35 +14,59 @@ class Cat:
         if self.age > 10:
             return 6
 
-    def _increase_saturation_level(self):
-       pass
+    def _increase_saturation_level(self, value):
+        self.saturation_level = self.saturation_level + value
 
-    def _reduce_saturation_level(self):
-        pass
+        if self.saturation_level > 100:
+            self.saturation_level = 100
+
+    def _reduce_saturation_level(self, value):
+        self.saturation_level = self.saturation_level - value
+
+        if self.saturation_level < 0:
+            self.saturation_level = 0
 
     def get_saturation_level(self):
         result = f"Saturation level: {self.saturation_level}" if self.saturation_level > 0 else "Ваша кішка мертва :("
         return result
 
     def get_average_speed(self):
-        pass
+        return f"Average speed: {self.value_speed}"
 
     def print_age(self):
         print(self.age)
 
-    def run(self):
-        pass
+    def run(self, value):
+        if value <= 25:
+            self._reduce_saturation_level(2)
+        if 25 < value <= 50:
+            self._reduce_saturation_level(5)
+        if 50 < value <= 100:
+            self._reduce_saturation_level(15)
+        if 100 < value <= 200:
+            self._reduce_saturation_level(25)
+        if value > 200:
+            self._reduce_saturation_level(50)
 
-    def food(self):
-        pass
+        return f"Ваша кішка пробігла {value} кілометрів"
 
 
-a = Cat(1)
-a.print_age()
-a._increase_saturation_level()
-print(a.value_speed)
-print(a.saturation_level)
+    def food(self, value):
+        meal = {"feed": 10, "apple": 5, "milk": 2}
+        print(f"{value}:", meal[value])
+        self._increase_saturation_level(meal[value])
+
+
+
+a = Cat(7)
+a.food("feed")
+a.food("milk")
+a.food("apple")
+
 print(a.get_saturation_level())
+print(a.run(51))
+print(a.get_saturation_level())
+print(a.get_average_speed())
 
 
 
