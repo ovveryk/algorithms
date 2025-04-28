@@ -56,15 +56,13 @@ class Cat:
         print(f"{value}:", meal[value])
         self._increase_saturation_level(meal[value])
 
-
-
 a = Cat(7)
 a.food("feed")
-a.food("milk")
-a.food("apple")
+
+
 
 print(a.get_saturation_level())
-print(a.run(51))
+print(a.run(100))
 print(a.get_saturation_level())
 print(a.get_average_speed())
 
